@@ -9,6 +9,7 @@
 			href="./icon/nike-favicon-48x48.ico"
 			type="image/x-icon"
 		/>
+		<script defer src="./js/index.js" type="module"></script>
 		<title>Nike Air Mag</title>
 	</head>
 	<body class="page__body">
@@ -23,7 +24,11 @@
 						alt="Логотип Nike"
 					/>
 				</a>
-				<nav class="menu header__menu" aria-label="Главное меню">
+				<nav
+					class="menu header__menu"
+					id="header__menu"
+					aria-label="Главное меню"
+				>
 					<ul class="menu__list">
 						<li class="menu__item">
 							<a class="menu__link" href="#air-mag" lang="en">Air Mag</a>
@@ -42,7 +47,11 @@
 				<div class="header__controls">
 					<a class="header__order" href="#">Сделать заказ</a>
 					<div class="header__actions">
-						<button class="header__actions-button">
+						<button
+							class="header__actions-button"
+							aria-label="Поиск"
+							title="Поиск"
+						>
 							<svg width="24" height="24">
 								<use
 									class="header__actions-icon"
@@ -50,11 +59,32 @@
 								></use>
 							</svg>
 						</button>
-						<button class="header__actions-button">
+						<button
+							class="header__actions-button"
+							aria-label="Корзина"
+							title="Корзина"
+						>
 							<svg width="24" height="24">
 								<use
 									class="header__actions-icon"
 									href="./icon/sprite.svg#cart"
+								></use>
+							</svg>
+						</button>
+						<button
+							class="header__burger burger"
+							aria-label="Открыть меню"
+							aria-expanded="false"
+							aria-controls="neader__menu"
+						>
+							<svg width="24" height="24">
+								<use
+									class="burger__icon-menu"
+									href="./icon/sprite.svg#menu-burger"
+								></use>
+								<use
+									class="burger__icon-cross"
+									href="./icon/sprite.svg#menu-cross"
 								></use>
 							</svg>
 						</button>
